@@ -18,13 +18,17 @@
   --font: "Odibee Sans";
   --medium-rem: 1.4375rem;
   --small-rem: 0.625rem;
+  --zero: 0;
   --default-rem: 1.125rem;
   --large-rem: 2.25rem;
   --light-red: #ff6666;
   --light-gray: #c4c4c4;
+  --white-color: #fff;
   --center: center;
   --width-full: 100%;
+  --height-full: 100vh;
   --width-not-full: 97%;
+  --light-dark: rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -71,4 +75,28 @@ input {
 .timer {
   font-size: calc(100px - 64px);
   text-align: var(--center);
+}
+
+.modal__container {
+  position: fixed;
+  top: var(--zero);
+  left: var(--zero);
+  width: var(--width-full);
+  height: var(--height-full);
+  background-color: var(--light-dark);
+  display: flex;
+  align-items: var(--center);
+  justify-content: var(--center);
+}
+
+.modal__container .modal__box {
+  width: var(--width-full);
+  display: flex;
+  justify-content: var(--center);
+  background-color: var(--white-color);
+  border-radius: calc(100px - 90px);
+  padding-top: calc(100px - 85px);
+  padding-bottom: calc(100px - 85px);
+  flex-direction: column;
+  align-items: var(--center);
 }
