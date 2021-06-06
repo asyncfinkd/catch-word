@@ -91,7 +91,7 @@ input {
 }
 
 .modal__container .modal__box {
-  width: var(--width-full);
+  width: 400px;
   display: flex;
   justify-content: var(--center);
   background-color: var(--white-color);
@@ -105,4 +105,12 @@ input {
 .modal__container .modal__box h1 {
   font-size: calc(100px - 36px);
   color: var(--medium-red);
+}
+
+.modal__container .modal__box .modal__result p {
+  font-size: calc(100px - 76px);
+}
+
+.modal__container .modal__box .modal__result button {
+  margin-top: calc(100px - 40px);
 }
