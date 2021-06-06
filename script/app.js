@@ -6,6 +6,7 @@ let InputElement = document.querySelector("input");
 let ContainerElement = document.querySelector(".modal__container");
 let ButtonElement = document.getElementById("OK");
 let BoxElement = document.querySelector(".modal__container .modal__box");
+let AddTimerElement = document.querySelector(".add__timer");
 let Score = 0;
 let Stage = 0;
 let Timer = 50;
@@ -50,10 +51,12 @@ InputElement.addEventListener("keyup", () => {
     Timer += addTimeNumber;
     TimerElement.innerHTML = Timer + "s";
     TimerElement.classList.add("green");
+    AddTimerElement.style.display = "block";
     ScoreElement.innerHTML = "Score " + Score;
     setTimeout(() => {
       TimerElement.classList.remove("green");
-    }, 500);
+      AddTimerElement.style.display = "none";
+    }, 800);
   }
 });
 

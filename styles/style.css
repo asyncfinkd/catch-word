@@ -145,6 +145,14 @@ input {
   opacity: 0.9;
 }
 
+.add__timer {
+  text-align: center;
+  color: green;
+  animation-name: timer-anim;
+  animation-duration: 0.4s;
+  display: none;
+}
+
 .red {
   color: red;
 }
@@ -168,7 +176,18 @@ input {
     opacity: 0;
   }
   to {
-    transform: translateY(0px);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes timer-anim {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
