@@ -15,6 +15,8 @@
   --font: "Odibee Sans";
   --medium-rem: 1.4375rem;
   --small-rem: 0.625rem;
+  --default-rem: 1.125rem;
+  --light-red: #ff6666;
 }
 
 .font {
@@ -28,7 +30,16 @@
   margin-top: var(--small-rem);
 }
 
-.container {
+.game__container .game__score,
+.game__container .game__stage {
+  font-size: var(--default-rem);
+}
+
+.game__container .game__stage {
+  color: var(--light-red);
+}
+
+.game__container.container {
   padding-left: var(--medium-rem);
   padding-right: var(--medium-rem);
 }
