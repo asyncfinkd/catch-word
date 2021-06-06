@@ -24,6 +24,7 @@
   --light-red: #ff6666;
   --medium-red: #ff4545;
   --light-gray: #c4c4c4;
+  --blue-color: #379fff;
   --white-color: #fff;
   --center: center;
   --width-full: 100%;
@@ -111,6 +112,22 @@ input {
   font-size: calc(100px - 76px);
 }
 
+.modal__container .modal__box .modal__result p:first-child {
+  margin-top: calc(100px - 55px);
+}
+
 .modal__container .modal__box .modal__result button {
   margin-top: calc(100px - 40px);
+}
+
+.modal__container .modal__box .modal__result button {
+  margin-top: calc(100px - 40px);
+  width: calc(100px + 40px);
+  height: calc(20px + 24px);
+  border-radius: calc(10px + 10px);
+  background-color: var(--blue-color);
+  display: flex;
+  align-items: var(--center);
+  justify-content: var(--center);
+  color: var(--white-color);
 }
