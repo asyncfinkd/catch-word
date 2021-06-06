@@ -22,6 +22,13 @@
   --light-red: #ff6666;
   --light-gray: #c4c4c4;
   --center: center;
+  --width-full: 100%;
+  --width-not-full: 97%;
+}
+
+body {
+  padding-left: var(--medium-rem);
+  padding-right: var(--medium-rem);
 }
 
 .font {
@@ -44,11 +51,6 @@
   color: var(--light-red);
 }
 
-.game__container.container {
-  padding-left: var(--medium-rem);
-  padding-right: var(--medium-rem);
-}
-
 .word__container {
   font-size: var(--large-rem);
   margin-top: calc(100px - 75px);
@@ -62,4 +64,6 @@ input {
   text-align: var(--center);
   display: flex;
   margin: calc(100px - 75px) auto;
+  width: var(--width-full);
+  max-width: var(--width-full);
 }
