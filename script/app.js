@@ -42,6 +42,8 @@ InputElement.addEventListener("keyup", () => {
   if (InputElement.value === randomWord) {
     InputElement.value = "";
     setRandomWord();
+    Score++;
+    ScoreElement.innerHTML = "Score " + Score;
   }
 });
 
