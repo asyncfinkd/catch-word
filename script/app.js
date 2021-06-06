@@ -1,10 +1,25 @@
 let ScoreElement = document.querySelector(".game__score");
 let StageElement = document.querySelector(".game__stage");
 let TimerElement = document.querySelector(".timer");
+let WordsElement = document.querySelector(".word__container");
 let Score = 0;
 let Stage = 0;
 let Timer = 50;
 let Interval = 1000;
+let Words = [
+  "book",
+  "apple",
+  "microsoft",
+  "wine",
+  "production",
+  "left",
+  "right",
+  "bottom",
+  "top",
+  "sweet",
+  "facebook",
+  "google",
+];
 let Elements = [
   {
     element: ScoreElement,
@@ -26,13 +41,28 @@ function Application() {
     const { element, text, variable } = item;
     element.innerHTML = text + variable;
   });
+  setRandomWord();
+}
+
+function setRandomWord() {
+  let randomWord = Words[Math.floor(Math.random() * Words.length)];
+  WordsElement.innerHTML = randomWord;
 }
 
 function timerSetting() {
-  Timer--;
-  TimerElement.innerHTML = Timer + "s";
+  if (Timer <= 0) {
+    return gameOver();
+  } else {
+    Timer--;
+    TimerElement.innerHTML = Timer + "s";
+  }
 }
 
 function StartTimer() {
   setInterval(timerSetting, Interval);
+}
+
+function gameOver() {
+  clearInterval(StartTimer);
+  //   return alert("Oops, Time out");
 }
