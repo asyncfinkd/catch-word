@@ -22,6 +22,7 @@
   --default-rem: 1.125rem;
   --large-rem: 2.25rem;
   --light-red: #ff6666;
+  --medium-red: #ff4545;
   --light-gray: #c4c4c4;
   --white-color: #fff;
   --center: center;
@@ -99,4 +100,9 @@ input {
   padding-bottom: calc(100px - 85px);
   flex-direction: column;
   align-items: var(--center);
+}
+
+.modal__container .modal__box h1 {
+  font-size: calc(100px - 36px);
+  color: var(--medium-red);
 }
