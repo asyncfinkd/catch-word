@@ -40,8 +40,8 @@ StartTimer();
 
 InputElement.addEventListener("keyup", () => {
   if (InputElement.value === randomWord) {
-    setRandomWord();
     InputElement.value = "";
+    setRandomWord();
   }
 });
 
