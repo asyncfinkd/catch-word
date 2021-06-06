@@ -52,6 +52,7 @@ InputElement.addEventListener("keyup", () => {
     TimerElement.innerHTML = Timer + "s";
     TimerElement.classList.add("green");
     AddTimerElement.style.display = "block";
+    AddTimerElement.innerHTML = "+" + addTimeNumber;
     ScoreElement.innerHTML = "Score " + Score;
     setTimeout(() => {
       TimerElement.classList.remove("green");
