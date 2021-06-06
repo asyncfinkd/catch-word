@@ -9,6 +9,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
+  border: none;
 }
 
 :root {
@@ -16,7 +18,10 @@
   --medium-rem: 1.4375rem;
   --small-rem: 0.625rem;
   --default-rem: 1.125rem;
+  --large-rem: 2.25rem;
   --light-red: #ff6666;
+  --light-gray: #c4c4c4;
+  --center: center;
 }
 
 .font {
@@ -26,7 +31,7 @@
 .game__container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: var(--center);
   margin-top: var(--small-rem);
 }
 
@@ -42,4 +47,19 @@
 .game__container.container {
   padding-left: var(--medium-rem);
   padding-right: var(--medium-rem);
+}
+
+.word__container {
+  font-size: var(--large-rem);
+  margin-top: calc(100px - 75px);
+  text-align: var(--center);
+}
+
+input {
+  margin-top: calc(100px - 35px);
+  border-bottom: 1px solid var(--light-gray);
+  font-size: calc(100px - 76px);
+  text-align: var(--center);
+  display: flex;
+  margin: calc(100px - 75px) auto;
 }
