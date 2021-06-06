@@ -3,6 +3,8 @@ let StageElement = document.querySelector(".game__stage");
 let TimerElement = document.querySelector(".timer");
 let WordsElement = document.querySelector(".word__container");
 let InputElement = document.querySelector("input");
+let ContainerElement = document.querySelector(".modal__container");
+let ButtonElement = document.getElementById("OK");
 let Score = 0;
 let Stage = 0;
 let Timer = 50;
@@ -75,5 +77,9 @@ function StartTimer() {
 
 function gameOver() {
   clearInterval(StartTimer);
-  document.querySelector(".modal__container").style.display = "flex";
+  ContainerElement.style.display = "flex";
 }
+
+ButtonElement.addEventListener("click", () => {
+  window.location.reload();
+});
