@@ -58,12 +58,16 @@ body {
 }
 
 input {
-  margin-top: calc(100px - 35px);
   border-bottom: 1px solid var(--light-gray);
   font-size: calc(100px - 76px);
   text-align: var(--center);
   display: flex;
-  margin: calc(100px - 75px) auto;
+  margin: calc(100px - 35px) auto 40px auto;
   width: var(--width-full);
   max-width: var(--width-full);
+}
+
+.timer {
+  font-size: calc(100px - 64px);
+  text-align: var(--center);
 }
