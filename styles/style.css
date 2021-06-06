@@ -3,8 +3,32 @@
     Github: http://github.com/asyncfinkd
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --font: "Odibee Sans";
+  --medium-rem: 1.4375rem;
+  --small-rem: 0.625rem;
+}
+
+.font {
+  font-family: var(--font);
+}
+
+.game__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--small-rem);
+}
+
+.container {
+  padding-left: var(--medium-rem);
+  padding-right: var(--medium-rem);
 }
