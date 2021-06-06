@@ -2,6 +2,7 @@ let ScoreElement = document.querySelector(".game__score");
 let StageElement = document.querySelector(".game__stage");
 let TimerElement = document.querySelector(".timer");
 let WordsElement = document.querySelector(".word__container");
+let InputElement = document.querySelector("input");
 let Score = 0;
 let Stage = 0;
 let Timer = 50;
@@ -20,6 +21,7 @@ let Words = [
   "facebook",
   "google",
 ];
+let randomWord = null;
 let Elements = [
   {
     element: ScoreElement,
@@ -36,6 +38,13 @@ let Elements = [
 Application();
 StartTimer();
 
+InputElement.addEventListener("keyup", () => {
+  if (InputElement.value === randomWord) {
+    setRandomWord();
+    InputElement.value = "";
+  }
+});
+
 function Application() {
   Elements.map((item) => {
     const { element, text, variable } = item;
@@ -45,7 +54,7 @@ function Application() {
 }
 
 function setRandomWord() {
-  let randomWord = Words[Math.floor(Math.random() * Words.length)];
+  randomWord = Words[Math.floor(Math.random() * Words.length)];
   WordsElement.innerHTML = randomWord;
 }
 
