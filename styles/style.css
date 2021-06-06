@@ -130,4 +130,11 @@ input {
   align-items: var(--center);
   justify-content: var(--center);
   color: var(--white-color);
+  font-size: calc(10px + 8px);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modal__container .modal__box .modal__result button:hover {
+  opacity: 0.9;
 }
