@@ -95,6 +95,7 @@ input {
 
 .modal__container .modal__box {
   width: 400px;
+  opacity: 0;
   display: flex;
   justify-content: var(--center);
   background-color: var(--white-color);
@@ -103,6 +104,9 @@ input {
   padding-bottom: calc(100px - 85px);
   flex-direction: column;
   align-items: var(--center);
+  animation-name: box-anim;
+  animation-duration: 0.6s;
+  animation-delay: 0.5s;
 }
 
 .modal__container .modal__box h1 {
@@ -146,6 +150,17 @@ input {
     opacity: 0;
   }
   to {
+    opacity: 1;
+  }
+}
+
+@keyframes box-anim {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
     opacity: 1;
   }
 }

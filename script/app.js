@@ -5,6 +5,7 @@ let WordsElement = document.querySelector(".word__container");
 let InputElement = document.querySelector("input");
 let ContainerElement = document.querySelector(".modal__container");
 let ButtonElement = document.getElementById("OK");
+let BoxElement = document.querySelector(".modal__container .modal__box");
 let Score = 0;
 let Stage = 0;
 let Timer = 50;
@@ -41,7 +42,7 @@ Application();
 StartTimer();
 
 InputElement.addEventListener("keyup", () => {
-  if (InputElement.value === randomWord) {
+  if (InputElement.value.trim().toLocaleLowerCase() === randomWord) {
     InputElement.value = "";
     setRandomWord();
     Score++;
@@ -78,6 +79,9 @@ function StartTimer() {
 function gameOver() {
   clearInterval(StartTimer);
   ContainerElement.style.display = "flex";
+  setTimeout(() => {
+    BoxElement.style.opacity = "1";
+  }, 500);
 }
 
 ButtonElement.addEventListener("click", () => {
