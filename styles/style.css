@@ -145,6 +145,14 @@ input {
   opacity: 0.9;
 }
 
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
 @keyframes fade-anim {
   from {
     opacity: 0;

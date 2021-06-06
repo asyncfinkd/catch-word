@@ -10,6 +10,7 @@ let Score = 0;
 let Stage = 0;
 let Timer = 50;
 let Interval = 1000;
+let addTimeNumber = 3;
 let Words = [
   "book",
   "apple",
@@ -46,7 +47,13 @@ InputElement.addEventListener("keyup", () => {
     InputElement.value = "";
     setRandomWord();
     Score++;
+    Timer += addTimeNumber;
+    TimerElement.innerHTML = Timer + "s";
+    TimerElement.classList.add("green");
     ScoreElement.innerHTML = "Score " + Score;
+    setTimeout(() => {
+      TimerElement.classList.remove("green");
+    }, 500);
   }
 });
 
