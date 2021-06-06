@@ -75,5 +75,5 @@ function StartTimer() {
 
 function gameOver() {
   clearInterval(StartTimer);
-  //   return alert("Oops, Time out");
+  document.querySelector(".modal__container").style.display = "flex";
 }

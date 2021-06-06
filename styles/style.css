@@ -86,7 +86,7 @@ input {
   width: var(--width-full);
   height: var(--height-full);
   background-color: var(--light-dark);
-  display: flex;
+  display: none;
   align-items: var(--center);
   justify-content: var(--center);
 }
